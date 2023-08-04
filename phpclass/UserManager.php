@@ -5,7 +5,7 @@ class UserManager
 
     public function register($email, $password)
     {
-        // Validate and sanitize the data (similar to the registration script)
+        // Validate and sanitize the data 
         $email = filter_var($email, FILTER_VALIDATE_EMAIL);
         $password = htmlspecialchars($password);
 
@@ -24,7 +24,7 @@ class UserManager
 
     public function login($email, $password)
     {
-        // Validate and sanitize the data (similar to the login script)
+        // Validate and sanitize the data 
         $email = filter_var($email, FILTER_VALIDATE_EMAIL);
         $password = htmlspecialchars($password);
 

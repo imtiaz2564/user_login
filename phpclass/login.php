@@ -11,7 +11,7 @@ class Login {
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $userManager = new UserManager();
         $email = $_POST['email'];
-        $password = $_POST['password'];
+        $password = md5($_POST['password']);
     
         $result = $userManager->login($email, $password);
     
