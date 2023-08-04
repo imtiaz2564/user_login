@@ -7,7 +7,7 @@ class UserManager
     {
         // Validate and sanitize the data 
         $email = filter_var($email, FILTER_VALIDATE_EMAIL);
-        $password = htmlspecialchars($password);
+        $password = md5(htmlspecialchars($password));
 
         if (!$email) {
             return 'Invalid email format';
@@ -26,7 +26,7 @@ class UserManager
     {
         // Validate and sanitize the data 
         $email = filter_var($email, FILTER_VALIDATE_EMAIL);
-        $password = htmlspecialchars($password);
+        $password = md5(htmlspecialchars($password));
 
         if (!$email) {
             return 'Invalid email format';
